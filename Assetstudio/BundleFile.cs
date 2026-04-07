@@ -388,7 +388,7 @@ namespace AssetStudio
 
             var versionStr = m_Header.unityRevision;
 
-            if (versionStr.StartsWith("2020") ||
+            if (versionStr.CompareTo("2020") < 0 || // 2020 and earlier
                 (versionStr.StartsWith("2020.3") && versionStr.CompareTo("2020.3.34") <= 0) || // <= 2020.3.34
                 (versionStr.StartsWith("2021.3") && versionStr.CompareTo("2021.3.2") <= 0) || // <= 2021.3.2
                 (versionStr.StartsWith("2022.3") && versionStr.CompareTo("2022.3.1") <= 0)) // <= 2022.3.1
